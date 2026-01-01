@@ -13,20 +13,21 @@ Treasury Address: 0xd4a27D669c8F27BF293b4D15269E0398CDb27aE1
 \`\`\`
 User Wallet
     ↓
-    Pays 5 MNEE to launch swarm
+    Pays 1 MNEE to launch swarm
     ↓
 Platform Treasury (receives initial payment)
     ↓
-    AI Swarm runs (7 specialized agents)
+    AI Swarm runs (7 specialised agents)
     ↓
 Provider Payments (currently all to treasury)
-    ├─ Grok Researcher → 0xd4a2...aE1 (1.2 MNEE)
-    ├─ GPT-4 Strategist → 0xd4a2...aE1 (1.5 MNEE)
-    ├─ Claude Writer → 0xd4a2...aE1 (0.8 MNEE)
-    └─ ... (other agents)
+    ├─ Grok Researcher → 0xd4a2...aE1 (0.25 MNEE)
+    ├─ GPT-4 Strategist → 0xd4a2...aE1 (0.2 MNEE)
+    ├─ Claude Writer → 0xd4a2...aE1 (0.3 MNEE)
+    ├─ ... (other agents)
+    └─ ... Refund 'Unspent' Budget back to User.
 \`\`\`
 
-**Result:** All MNEE stays in your treasury, but the system tracks which "virtual provider" completed each task.
+**Result:** Currently All MNEE stays in treasury Wallet for Hackathon Purposes, but the system tracks which "virtual provider" completed each task.
 
 ---
 
@@ -48,7 +49,7 @@ Configured in `lib/agents/ai-providers.ts`:
 
 ## How to Add Real Providers (Future)
 
-When you're ready to onboard real AI service providers who want to earn MNEE:
+When we're ready to onboard real AI service providers who want to earn MNEE:
 
 ### Step 1: Provider Registers
 
