@@ -31,7 +31,7 @@ Since MNEE (0x8cce...6cF) only exists on Ethereum Mainnet, you need to deploy a 
 2. Create new file: `TestMNEE.sol`
 3. Paste this code:
 
-```solidity
+\`\`\`solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 

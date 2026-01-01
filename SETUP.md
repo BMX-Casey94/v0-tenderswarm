@@ -17,15 +17,15 @@ You only need to set **ONE** environment variable:
 
 ### Required Variable
 
-```bash
+\`\`\`bash
 NEXT_PUBLIC_PLATFORM_TREASURY=0xd4a27D669c8F27BF293b4D15269E0398CDb27aE1
-```
+\`\`\`
 
 This is your treasury address where MNEE payments will be sent when users launch AI swarms.
 
 ### Optional Variables
 
-```bash
+\`\`\`bash
 # Only needed if you want to deploy custom TenderEscrow contract (optional)
 NEXT_PUBLIC_TENDER_ESCROW_ADDRESS=0xYourEscrowContractAddress
 
@@ -34,7 +34,7 @@ AI_GATEWAY_API_KEY=your_key_here
 
 # Grok API Key (already configured in your workspace)  
 GROK_API_KEY=your_key_here
-```
+\`\`\`
 
 ---
 
@@ -66,14 +66,14 @@ Users can also use **Demo Mode** which simulates everything without real transac
 ### For Development
 
 1. Add the environment variable to your `.env.local`:
-   ```bash
+   \`\`\`bash
    NEXT_PUBLIC_PLATFORM_TREASURY=0xd4a27D669c8F27BF293b4D15269E0398CDb27aE1
-   ```
+   \`\`\`
 
 2. Run the app:
-   ```bash
+   \`\`\`bash
    npm run dev
-   ```
+   \`\`\`
 
 3. Test with Demo Mode (no real MNEE needed)
 

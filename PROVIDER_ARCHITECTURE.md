@@ -4,13 +4,13 @@
 
 All AI agents currently use **Vercel AI Gateway** models and payments route to your **Platform Treasury** address:
 
-```
+\`\`\`
 Treasury Address: 0xd4a27D669c8F27BF293b4D15269E0398CDb27aE1
-```
+\`\`\`
 
 ### Payment Flow
 
-```
+\`\`\`
 User Wallet
     ↓
     Pays 5 MNEE to launch swarm
@@ -24,7 +24,7 @@ Provider Payments (currently all to treasury)
     ├─ GPT-4 Strategist → 0xd4a2...aE1 (1.5 MNEE)
     ├─ Claude Writer → 0xd4a2...aE1 (0.8 MNEE)
     └─ ... (other agents)
-```
+\`\`\`
 
 **Result:** All MNEE stays in your treasury, but the system tracks which "virtual provider" completed each task.
 
@@ -61,7 +61,7 @@ Provider provides:
 
 ### Step 2: Update ai-providers.ts
 
-```typescript
+\`\`\`typescript
 // Before (treasury model):
 {
   id: "grok-researcher",
@@ -87,7 +87,7 @@ Provider provides:
   owner: "0xProviderOwnerAddress", // Owner who paid the slot fee
   slotExpiry: new Date("2025-02-15"), // When slot expires
 }
-```
+\`\`\`
 
 ### Step 3: Payments Automatically Route
 
@@ -111,7 +111,7 @@ You can monetize by selling "provider slots":
 
 ### Example Economics
 
-```
+\`\`\`
 Provider "DeepMind Research AI" joins:
   - Pays 100 MNEE slot fee → Your treasury
   - Gets listed in research category
@@ -120,11 +120,11 @@ User launches 10 MNEE swarm:
   - Research task assigned to DeepMind (2 MNEE)
   - DeepMind receives: 1.8 MNEE (90%)
   - Platform receives: 0.2 MNEE (10% fee)
-```
+\`\`\`
 
 ### Implementation Sketch
 
-```typescript
+\`\`\`typescript
 // Add to ai-providers.ts:
 export interface ProviderSlot {
   provider: AIProvider
@@ -150,7 +150,7 @@ const platformAmount = taskReward * platformFee // 10%
 
 await escrowClient.transferMNEE(userAddress, providerAddress, providerAmount)
 await escrowClient.transferMNEE(userAddress, PLATFORM_TREASURY, platformAmount)
-```
+\`\`\`
 
 ---
 
@@ -180,7 +180,7 @@ await escrowClient.transferMNEE(userAddress, PLATFORM_TREASURY, platformAmount)
 
 ## File Structure
 
-```
+\`\`\`
 lib/
 ├── agents/
 │   ├── ai-providers.ts          ← Central provider config (edit addresses here)
@@ -192,7 +192,7 @@ lib/
 │   └── escrow-client.ts        ← Handles MNEE transfers
 └── simulator/
     └── provider-simulator.ts    ← Uses AI_PROVIDERS for simulation
-```
+\`\`\`
 
 ---
 
@@ -215,14 +215,14 @@ lib/
 **To Change Payment Address for All Providers:**
 
 Edit `lib/contracts/config.ts`:
-```typescript
+\`\`\`typescript
 export const PLATFORM_TREASURY = "0xYourNewAddress" as `0x${string}`
-```
+\`\`\`
 
 **To Add a New Provider:**
 
 Edit `lib/agents/ai-providers.ts` and add to `AI_PROVIDERS` array:
-```typescript
+\`\`\`typescript
 {
   id: "unique-id",
   name: "Provider Name",
@@ -233,7 +233,7 @@ Edit `lib/agents/ai-providers.ts` and add to `AI_PROVIDERS` array:
   responseTime: 8000,
   isActive: true,
 }
-```
+\`\`\`
 
 **To Temporarily Disable a Provider:**
 
