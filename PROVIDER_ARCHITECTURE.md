@@ -205,9 +205,9 @@ lib/
 - [x] Payments route to treasury address
 - [x] Payment feed shows transactions with Etherscan links
 - [x] All 7 AI providers use correct AI Gateway models
-- [ ] Test real MNEE transfer on mainnet (when ready)
-- [ ] Verify treasury receives payments
-- [ ] Check Etherscan for transaction confirmations
+- [x] Test real MNEE transfer on mainnet (when ready)
+- [x] Verify treasury receives payments
+- [x] Check Etherscan for transaction confirmations
 
 ---
 
