@@ -183,7 +183,7 @@ Built for the MNEE Token Hackathon. TenderSwarm demonstrates a practical applica
 
 ## Contributing
 
-This project was built entirely using v0.app.
+This project was built entirely using v0.app, showcasing how it's possible to create such apps without any complex software, and using natural language prompting via AI coding agents.
 
 ## License
 
